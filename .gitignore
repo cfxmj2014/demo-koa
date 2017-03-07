@@ -4,3 +4,7 @@ dist/
 .sass-cache
 .DS_Store
 npm-debug.log
+# Logs
+logs
+*.log
+npm-debug.log*
