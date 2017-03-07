@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>{% block title %} koa demo {% endblock %}</title>
+    <meta name="keywords" content={% block keywords %} "koa nunjucks" {% endblock %} />
+    <meta name="description" content= {% block description %} "koa demo" {% endblock %} />
+    <meta http-equiv="Expires" CONTENT="0">
+    <meta http-equiv="Cache-Control" content="no-cache">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximun-scale=1.0,user-scalable=0">
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    {% block css %}{% endblock %}
+  </head>
+
+  <body>
+  {% block body %}{% endblock %}
+  </body>
+  <script type="text/javascript" src="/static/script/commons.js"></script>
+  {% block js %}{% endblock %}
+</html>

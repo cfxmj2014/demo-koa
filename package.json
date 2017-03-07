@@ -1,0 +1,46 @@
+{
+  "name": "demo-koa",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev:server": "nodemon lib/index.js --exec babel-node",
+    "dev:webpack": "./node_modules/.bin/webpack-dev-server -d --progress --colors",
+    "dev:browser-sync": "./node_modules/.bin/browser-sync start --proxy localhost:5001 --port 3001 -f static/style",
+    "dev:compass": "compass compile & compass watch",
+    "cp:images": "cp -r static/images/ dist/static/images",
+    "webpack": "./node_modules/.bin/webpack -d --progress --colors",
+    "dev": "npm run dev:server & npm run dev:webpack & npm run dev:browser-sync & npm run dev:compass",
+    "pro": "npm run cp:images & npm run dev:server & npm run webpack & npm run dev:compass"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "babel-runtime": "^6.23.0",
+    "jquery": "^3.1.1",
+    "koa": "^2.0.0-alpha.8",
+    "koa-bodyparser": "^3.2.0",
+    "koa-logger": "^2.0.1",
+    "koa-mount": "^2.0.0",
+    "koa-router": "^7.0.1",
+    "koa-static": "^3.0.0",
+    "koa-views": "^5.2.1",
+    "nunjucks": "^3.0.0",
+    "promise-mysql": "^3.0.0",
+    "sql-template-strings": "^2.2.2"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.23.0",
+    "babel-core": "^6.23.1",
+    "babel-loader": "^6.3.2",
+    "babel-plugin-transform-runtime": "^6.23.0",
+    "babel-preset-env": "^1.1.8",
+    "browser-sync": "^2.18.8",
+    "mocha": "^3.2.0",
+    "nodemon": "^1.11.0",
+    "webpack": "^2.2.1",
+    "webpack-dev-server": "^2.4.1"
+  }
+}

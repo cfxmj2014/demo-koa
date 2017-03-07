@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+
+{% block title %} koa demo 2 {% endblock %}
+
+{% block css %}
+<link rel="stylesheet" type="text/css" href="/static/style/index.css">
+{% endblock %}
+
+{% block body %}
+
+{% for item in data %}
+  {% if item.name !== '2' %}
+  <p>{{item.name}}——{{item.coursePlace}}</p>
+  {% endif %}
+{% endfor %}
+
+<img src="/static/images/succeed.png">
+<p>this is a koa demo </p>
+
+{% endblock %}
+
+{% block js %}
+<script type="text/javascript" src="/static/script/index.js"></script>
+<script type="text/javascript" src="/static/script/home.js"></script>
+{% endblock %}
